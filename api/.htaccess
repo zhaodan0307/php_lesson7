@@ -1,0 +1,8 @@
+# This is the blood and guts of our routing.
+# This will intercept any request and redirect it
+# to our root index.php file.
+# 这个就是让 all request of api 都直接去 index.php,然后我们modifiy这个index。php
+<IfModule mod_rewrite.c >
+    RewriteEngine On
+    RewriteRule ^.*$ index.php [L]
+</IfModule>
